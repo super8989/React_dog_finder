@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import whiskey from "./images/whiskey.jpg";
+import hazel from "./images/hazel.jpg";
+import tubby from "./images/tubby.jpg";
 import "./App.css";
 
 class App extends Component {
@@ -7,7 +11,7 @@ class App extends Component {
 			{
 				name: "Whiskey",
 				age: 5,
-				src: "whiskey",
+				src: whiskey,
 				facts: [
 					"Whiskey loves eating popcorn.",
 					"Whiskey is a terrible guard dog.",
@@ -17,7 +21,7 @@ class App extends Component {
 			{
 				name: "Hazel",
 				age: 3,
-				src: "hazel",
+				src: hazel,
 				facts: [
 					"Hazel has so much energy!",
 					"Hazel is highly intelligent",
@@ -27,7 +31,7 @@ class App extends Component {
 			{
 				name: "Tubby",
 				age: 4,
-				src: "tubby",
+				src: tubby,
 				facts: [
 					"Tubby is a fatty",
 					"Tubby does not like exercise",
@@ -38,11 +42,7 @@ class App extends Component {
 	};
 
 	render() {
-		return (
-			<div className='App'>
-				<h1 className='display-1'>Dog App</h1>
-			</div>
-		);
+		return <Route path='/dogs' render={() => <h1>Dog List</h1>} />;
 	}
 }
 
