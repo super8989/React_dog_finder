@@ -15,7 +15,7 @@ class App extends Component {
 				age: 5,
 				src: whiskey,
 				facts: [
-					"Whiskey loves eating popcorn.",
+					"Whiskey is a sweetie.",
 					"Whiskey is a terrible guard dog.",
 					"Whiskey wants to cuddle with you!"
 				]
