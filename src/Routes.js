@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 import DogList from "./DogList";
 import DogDetails from "./DogDetails";
-import { Switch, Route } from "react-router-dom";
 
 class Routes extends Component {
 	render() {
@@ -21,6 +21,7 @@ class Routes extends Component {
 					render={() => <DogList dogs={this.props.dogs} />}
 				/>
 				<Route exact path='/dogs/:name' render={getDog} />
+				<Redirect to='/dogs' />
 			</Switch>
 		);
 	}
