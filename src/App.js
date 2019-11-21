@@ -55,7 +55,7 @@ class App extends Component {
 
 		return (
 			<div>
-				<Navbar dog={this.props.dogs} />
+				<Navbar dogs={this.props.dogs} />
 				<Switch>
 					<Route
 						exact

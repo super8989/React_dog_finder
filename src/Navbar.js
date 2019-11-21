@@ -3,6 +3,14 @@ import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {
 	render() {
+		const dogLinks = this.props.dogs.map(dog => (
+			<li className='nav-item'>
+				<NavLink to={`/dogs/${dog.name}`} className='nav-link' key={dog.name}>
+					{dog.name}
+				</NavLink>
+			</li>
+		));
+
 		return (
 			<nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
 				<a className='navbar-brand' href='#'>
@@ -26,6 +34,7 @@ class Navbar extends Component {
 								Home
 							</NavLink>
 						</li>
+						{dogLinks}
 					</ul>
 				</div>
 			</nav>
