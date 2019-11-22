@@ -12,7 +12,9 @@ class DogList extends Component {
 						<div className='Dog col-lg-4 text-center' key={d.name}>
 							<img src={d.src} alt={d.name} />
 							<h3>
-								<Link to={`dogs/${d.name}`}>{d.name}</Link>
+								<Link className='underline' to={`dogs/${d.name}`}>
+									{d.name}
+								</Link>
 							</h3>
 						</div>
 					))}
